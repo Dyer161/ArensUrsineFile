@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Ursine</name>
+		<description>Ursine Race</description>
+		<update version="0.1">
+			<file name="race-Ursine.xml" url="https://raw.githubusercontent.com/Dyer161/ArensUrsineFile/main/race-Ursine.xml" />
+		</update>
+	</info>
+
+	<element name="Ursine" type="Race" source="Aren's Ursine File :)" id="ID_AREN_RACE_URSINE">
+		<description>
+			<p> In general, ursines are bear-like humanoids with white, brown, or black fur and grayish-black skin beneath. They are very muscular, but also mentally developed. They can don armor and run on all fours or on their hind legs. Their facial fur is particularly long and shaggy, occasionally giving them the grizzled beard appearance. Their eyes are usually some dark color like brown, though dyes have been used.</p>
+			<p>Not much is known, except by the ursines themselves, about the history of this race. It is believed they hailed from bears that were originally fey which came through from the Feywilds around the time elves appeared in the Prime. These fey bears mated not only with local bears, but also humans. This resulted in an intelligent species that eventually lost its fey blood a bit and took on a more beastly lineage, who are the ursines. The fey bear's blood dominated much of the appearance aspect.</p>
+			<h4>URSINE TRAITS</h4>
+			<p>Ursines are beings in tune with nature but also advanced technologically. They resemble bears in many ways.</p>
+			<p class="indent">
+				<b>
+					<i>Age. </i>
+				</b>Ursines are known to live long lives, the oldest being nearly 900 years old.
+			</p>
+			<p class="indent">
+				<b>
+					<i>Alignment. </i>
+				</b>Ursines are extremely lawful.
+			</p>
+			<p class="indent">
+				<b>
+					<i>Size. </i>
+				</b>Ursines range from the side of regular medium to the larger end, though none too large. Your size is Medium.
+			</p>
+			<p class="indent">
+				<b>
+					<i>Speed. </i>
+				</b>Your base walking speed is 25 feet. The thick fur ursine sport is ample protection, but it is so thick that it hampers their ability to move as fast as normal bears and even humans.
+			</p>
+			<p class="indent">
+				<b>
+					<i>Ability Score Increase. </i>
+				</b>Your Constitution increases by 2 and your Strength score increases by 1.
+			</p>
+			<p class="indent">
+				<b>
+					<i>Languages. </i>
+				</b>You can speak, read and write Common. You can also communicate simple ideas to natural beast, but you have no way of understanding them in turn, and they are not necessarily friendly to you.
+			</p>
+			<p class="indent">
+				<b>
+					<i>Thick Fur. </i>
+				</b>While not wearing armor, your Armor Class is 13 + your Constitution modifier. You may use a shield and still be granted this bonus. You are unaffected by the effects of Extreme cold.
+			</p>
+			<p class="indent">
+				<b>
+					<i>Powerful Build. </i>
+				</b>You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.
+			</p>
+			<p class="indent">
+				<b>
+					<i>Sharp Claws. </i>
+				</b>Your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
+			</p>
+			<p class="indent">
+				<b>
+					<i>Durable. </i>
+				</b>You have great durability. Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.
+			</p>
+		</description>
+
+		<sheet display="false" />
+		<setters>
+			<set name="height" modifier="3d12">5'0"</set>
+			<set name="weight" modifier="1d4">150 lb.</set>
+		</setters>
+
+		<sheet display="false" />
+		<rules>
+			<stat name="innate speed" value="25" bonus="base" />
+			<stat name="constitution" value="2" />
+			<stat name="hp:misc" value="1"/>
+			<stat name="hp:misc" value="level"/>
+			<stat name="hp:calculation" value="hp:misc" bonus="calculation"/>
+			<stat name="ac:Thick Fur" value="13" />
+			<stat name="ac:Thick Fur" value="constitution:modifier" />
+			<stat name="ac:calculation" value="ac:Thick Fur" bonus="calculation" equiped="[armor:none]" alt="Thick Fur (Ursine)" />
+			<stat name="strength" value="1" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Racial Trait" id="ID_AREN_RACIAL_TRAIT_THICKFUR" />
+			<grant type="Racial Trait" id="ID_AREN_RACIAL_TRAIT_POWERFUL" />
+			<grant type="Racial Trait" id="ID_AREN_RACIAL_TRAIT_CLAWS" />
+			<grant type="Racial Trait" id="ID_AREN_RACIAL_TRAIT_DURABLE" />
+			<grant type="Racial Trait" id="ID_AREN_RACIAL_TRAIT_BEASTFOLK" />
+		</rules>
+	</element>
+
+	<element name="Thick Fur" type="Racial Trait" source="Aren's Ursine File :)" id="ID_AREN_RACIAL_TRAIT_THICKFUR">
+		<description>
+			<p>While not wearing armor, your Armor Class is 13 + your Constitution modifier. You may use a shield and still be granted this bonus. You are unaffected by the effects of Extreme cold.</p>
+		</description>
+		<sheet display="true">
+			<description>
+				While not wearing armor, your Armor Class is 13 + your Constitution modifier. You may use a shield and still be granted this bonus. You are unaffected by the effects of Extreme cold.
+			</description>
+			<p class ="indent">
+				While not wearing armor, your Armor Class is 13 + your Constitution modifier. You may use a shield and still be granted this bonus. You are unaffected by the effects of Extreme cold.
+			</p>
+		</sheet>
+		<rules>
+		</rules>
+	</element>
+
+	<element name="Powerful Build" type="Racial Trait" source="Aren's Ursine File :)" id="ID_AREN_RACIAL_TRAIT_POWERFUL">
+		<description>
+			<p>You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.</p>
+		</description>
+		<sheet display="true">
+			<description>
+				You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.
+			</description>
+			<p class ="indent">
+				You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.
+			</p>
+		</sheet>
+		<rules>
+		</rules>
+	</element>
+
+	<element name="Sharp Claws" type="Racial Trait" source="Aren's Ursine File :)" id="ID_AREN_RACIAL_TRAIT_CLAWS">
+		<description>
+			<p>Your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.</p>		
+		</description>
+		<sheet display="true">
+			<description>Your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.</description>
+			<p class ="indent">
+				Your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.
+			</p>
+		</sheet>
+		<rules>
+		</rules>
+	</element>
+
+	<element name="Durable" type="Racial Trait" source="Aren's Ursine File :)" id="ID_AREN_RACIAL_TRAIT_DURABLE">
+		<description>
+			<p>You have great durability. Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.</p>
+		</description>
+		<sheet display="true">
+			<description>You have great durability. Your hit point maximum increases by 1, and it increases by 1 every time you gain a level. </description>
+		</sheet>
+		<rules>
+		</rules>
+	</element>
+
+	<element name="Beastfolk" type="Racial Trait" source="Aren's Ursine File :)" id="ID_AREN_RACIAL_TRAIT_BEASTFOLK">
+		<description>
+			<p>You can communicate simple ideas to natural beasts, but you have no way of understanding them in turn, and they are not necessarily friendly to you.</p>
+		</description>
+		<sheet display="true">
+			<description>
+				You can communicate simple ideas to natural beasts, but you have no way of understanding them in turn, and they are not necessarily friendly to you.
+			</description>
+			<p class ="indent">
+				You can communicate simple ideas to natural beasts, but you have no way of understanding them in turn, and they are not necessarily friendly to you.
+			</p>
+		</sheet>
+		<rules>
+		</rules>
+	</element>
+
+</elements>
